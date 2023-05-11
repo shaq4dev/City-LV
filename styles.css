@@ -1,0 +1,455 @@
+:root {
+    --font-color: #133c55;
+    --button: #59a5d8;
+    --button-hover: #59a5d8;
+    --black: #000;
+    --white: #fff;
+    --hover: #32958f; 
+    --transition-01: all .3s ease;
+    --drop-menu-fs: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300&family=Work+Sans:ital,wght@0,400;0,600;0,800;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(Images/pexels-pixabay-315938.jpg);
+    background-size: cover;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    background: var(--white);
+    height: 60px;
+}
+
+h1 {
+    float: left;
+    margin: 15px 30px;
+}
+
+.menu-container ul {
+    display: flex;
+}
+
+.menu-container ul li {
+    padding: 20px 15px;
+    font-size: 18px;
+    transition: var(--transition-01);
+}
+
+.menu-container ul li:hover {
+    background: #bbc3db41;
+    cursor: pointer;
+    border-bottom: 2px solid pink;
+}
+
+.menu-container ul li a {
+    color: var(--font-color);
+}
+
+/* ABOUT */
+
+.about-dropdown-container {
+    position: absolute;
+    display: none;
+    top: 60px;
+    left: 56px;
+    background: white;
+    height: 50vh;
+    width: 50vw;
+    transition: var(--transition-01);
+}
+
+.menu-container ul li:hover .about-dropdown-container {
+    display: block;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-nfo, 
+.about-list-left, 
+.about-list-right {
+    flex: 1;
+}
+
+.about-list-left ul, 
+.about-list-right ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-dropdown-container ul li {
+    padding: 21px 25px;
+}
+
+.about-dropdown-container ul li a {
+    color: var(--font-color);
+    font-size: 15px;
+}
+
+/* ABOUT INFO SECTION */
+
+.about-nfo{
+    background: var(--button);
+    height: 50vh;
+}
+
+/* p element */
+
+.about-nfo .about-hero {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.about-nfo .about-description {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 5% 40px 5%;
+    color: var(--font-color);
+}
+
+/* IMG element */
+
+.about-dropdown-container .about-container
+.about-nfo img {
+    display: block;
+    width: 180px;
+    margin:0 auto;
+}
+
+/* button link */
+
+.about-nfo a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid var(--font-color);
+    transition: all .2s ease;
+}
+
+.about-nfo a:hover {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: var(--font-color);
+    color: var(--white);
+    border: 2px solid var(--white);
+    text-align: center;
+}
+
+/* List left */
+
+.about-list-left ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+    font-size: var(--drop-menu-fs)
+}
+
+.about-list-left ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+    font-size: var(--drop-menu-fs)
+}
+
+/* List right */
+
+.about-list-right ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+    font-size: var(--drop-menu-fs)
+}
+
+.about-list-right ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+    font-size: var(--drop-menu-fs)
+}
+
+/* ========= SECTION ========= */
+
+/* Products */
+
+.products-dropdown-container {
+    position: absolute;
+    display: none;
+    top: 60px;
+    left: 157px;
+    background: white;
+    height: 50vh;
+    width: 50vw;
+    transition: var(--transition-01);
+}
+
+.menu-container ul li:hover .products-dropdown-container {
+    display: block;
+}
+
+/* boxing */
+.products-dropdown {
+    display: flex;
+}
+
+.products-nfo,
+.products-list-left, 
+.products-list-right{
+    flex: 1;
+}
+
+/* info section */
+
+.products-nfo {
+    background: var(--button);
+    height: 50vh;
+}
+
+/* p element */
+
+.products-nfo .products-hero {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.products-nfo .products-description {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 5% 40px 5%;
+    color: var(--font-color);
+}
+
+/* IMG element */
+
+.products-dropdown-container .products-dropdown .products-nfo img {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+}
+
+/* button link */
+
+.products-nfo a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid var(--font-color);
+    transition: all .2s ease;
+}
+
+.products-nfo a:hover {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: var(--font-color);
+    color: var(--white);
+    border: 2px solid var(--white);
+    text-align: center;
+}
+
+
+/* list section left & right */
+.products-list-left ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+}
+
+.products-list-left ul li a {
+    font-size: var(--drop-menu-fs)
+}
+
+.products-list-left ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+}
+
+.products-list-right ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+}
+
+.products-list-right ul li a {
+    font-size: var(--drop-menu-fs)
+}
+
+.products-list-right ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+}
+
+
+
+/* ========= RESOURCES ========= */
+
+/* resources */
+
+/* .resources-dropdown-container */
+
+.resources-dropdown-container {
+    position: absolute;
+    display: none;
+    top: 60px;
+    left: 345px;
+    background: white;
+    height: 50vh;
+    width: 50vw;
+    transition: var(--transition-01);
+}
+
+.menu-container ul li:hover .resources-dropdown-container {
+    display: block;
+}
+
+/* resources boxing */
+
+.resources-dropdown {
+    display: flex;
+}
+
+.resources-nfo,
+.resources-list-left, 
+.resources-list-right {
+    flex: 1;
+}
+
+/* info section */
+
+.resources-nfo {
+    background: var(--button);
+    height: 50vh;
+}
+
+/* p element */
+
+.resources-nfo .resources-hero {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.resources-nfo .resources-description {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 5% 40px 5%;
+    color: var(--font-color);
+}
+
+/* IMG element */
+
+.resources-dropdown-container .resources-dropdown .resources-nfo img {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+}
+
+/* button link */
+
+.resources-nfo a {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center;
+    border: 2px solid var(--font-color);
+    transition: all .2s ease;
+}
+
+.resources-nfo a:hover {
+    display: block;
+    padding: 15px 20px;
+    margin: 0 30px;
+    border-radius: 8px;
+    background: var(--font-color);
+    color: var(--white);
+    border: 2px solid var(--white);
+    text-align: center;
+}
+
+/* resources list left */
+
+.resources-list-left ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+}
+
+.resources-list-left ul li a {
+    font-size: var(--drop-menu-fs)
+}
+
+.resources-list-left ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+}
+
+/* resources list right */
+
+.resources-list-right ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    background: rgb(224, 224, 224);
+    height: 100%;
+    transition: var(--transition-01);
+}
+
+.resources-list-right ul li a {
+    font-size: var(--drop-menu-fs)
+}
+
+.resources-list-right ul li:hover {
+    width: 100%;
+    background: var(--white);
+    border: none;
+}
